@@ -10,15 +10,16 @@
 <body>
   <!-- Barra de navegación -->
   <header class="topbar">
-   <div class="logo">
-  <a href="index.html">AdoptaConAmor</a>
-</div>
+    <div class="logo">
+      <a href="index.html">AdoptaConAmor</a>
+    </div>
     <nav class="nav">
       <a href="index.html">Inicio</a>
       <a href="catalogo.html">Catálogo</a>
       <a href="#como-funciona">Cómo funciona</a>
       <a href="#reseñas">Reseñas</a>
       <a href="contacto.html">Contacto</a>
+      <a href="login.html">Iniciar sesión</a>
     </nav>
     <button class="nav-toggle" id="navToggle">☰</button>
   </header>
@@ -42,14 +43,14 @@
     </div>
   </section>
 
-  <!-- Catálogo de mascotas (vista rápida en la portada, opcional) -->
+  <!-- Catálogo de mascotas (vista rápida en la portada) -->
   <section id="catalogo" class="section catalog">
     <div class="section-header">
       <h2>Mascotas en adopción</h2>
       <p>Explora algunas de las mascotas que esperan por una familia.</p>
     </div>
     <div class="catalog-grid">
-      <article class="pet-card">
+      <article class="pet-card" data-tipo="perro" data-edad="adulto">
         <div class="pet-photo">
           <img src="img/firulais.jpg" alt="Firulais" />
         </div>
@@ -60,7 +61,7 @@
         </button>
       </article>
 
-      <article class="pet-card">
+      <article class="pet-card" data-tipo="gato" data-edad="adulto">
         <div class="pet-photo">
           <img src="img/mishi.jpg" alt="Mishi" />
         </div>
@@ -71,7 +72,7 @@
         </button>
       </article>
 
-      <article class="pet-card">
+      <article class="pet-card" data-tipo="perro" data-edad="cachorro">
         <div class="pet-photo">
           <img src="img/rocco.jpg" alt="Rocco" />
         </div>
@@ -82,7 +83,7 @@
         </button>
       </article>
 
-      <article class="pet-card">
+      <article class="pet-card" data-tipo="gato" data-edad="adulto">
         <div class="pet-photo">
           <img src="img/Nala.jpg" alt="Nala" />
         </div>
@@ -142,7 +143,7 @@
     </div>
   </section>
 
-  <!-- Sección corta de contacto que invita a ir a la página de Contacto -->
+  <!-- Sección corta de contacto -->
   <section id="contacto" class="section contact">
     <div class="section-header">
       <h2>¿Listo para adoptar?</h2>
