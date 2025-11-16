@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Catálogo de Mascotas - AdoptaConAmor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <header class="topbar">
+    <div class="logo">AdoptaConAmor</div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="contacto.html">Contactar</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="section catalog">
+    <div class="section-header">
+      <h2>Mascotas en adopción</h2>
+      <p>Explora algunas de las mascotas que esperan una nueva familia.</p>
+    </div>
+
+    <!-- Barra de filtros simples (opcional / visual) -->
+    <div style="max-width: 900px; margin: 0 auto 2rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+      <span style="font-size: 0.9rem; color: #777;">Filtrar por:</span>
+      <select style="padding: 0.4rem 0.6rem; border-radius: 999px; border: 1px solid #ddd; font-size: 0.9rem;">
+        <option>Todos los tipos</option>
+        <option>Perros</option>
+        <option>Gatos</option>
+      </select>
+      <select style="padding: 0.4rem 0.6rem; border-radius: 999px; border: 1px solid #ddd; font-size: 0.9rem;">
+        <option>Cualquier edad</option>
+        <option>Cachorros</option>
+        <option>Adultos</option>
+      </select>
+    </div>
+
+    <!-- Grid de mascotas -->
+    <div class="catalog-grid">
+      <article class="pet-card">
+        <div class="pet-photo">Foto</div>
+        <h3>Firulais</h3>
+        <p>Perro • 3 años • Mestizo</p>
+        <button class="btn btn-outline">Quiero conocerlo</button>
+      </article>
+
+      <article class="pet-card">
+        <div class="pet-photo">Foto</div>
+        <h3>Mishi</h3>
+        <p>Gata • 2 años • Criolla</p>
+        <button class="btn btn-outline">Quiero conocerla</button>
+      </article>
+
+      <article class="pet-card">
+        <div class="pet-photo">Foto</div>
+        <h3>Rocco</h3>
+        <p>Perro • 1 año • Mediano</p>
+        <button class="btn btn-outline">Quiero conocerlo</button>
+      </article>
+
+      <article class="pet-card">
+        <div class="pet-photo">Foto</div>
+        <h3>Nala</h3>
+        <p>Gata • 4 años • Tricolor</p>
+        <button class="btn btn-outline">Quiero conocerla</button>
+      </article>
+
+      <!-- Puedes agregar más tarjetas aquí -->
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 AdoptaConAmor – Proyecto académico PSP</p>
+  </footer>
+
+  <!-- Tu JS general -->
+  <script src="formulario.js"></script>
+</body>
+</html>

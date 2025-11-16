@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>AdoptaConAmor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <header class="topbar">
+    <div class="logo">AdoptaConAmor</div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#reseñas">Reseñas</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </header>
+
+  <!-- Hero principal -->
+  <section id="inicio" class="hero">
+    <div class="hero-text">
+      <h1>Una nueva oportunidad para ellos.<br />Una nueva historia para ti.</h1>
+      <p>
+        Conecta con refugios y rescatistas para darle un hogar a una mascota que lo necesita.
+      </p>
+      <div class="hero-actions">
+        <a href="catalogo.html" class="btn btn-primary">Explorar mascotas</a>
+        <a href="#como-funciona" class="btn btn-secondary">Cómo funciona</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <!-- Pon aquí una imagen real en tu proyecto, por ejemplo /img/hero.jpg -->
+      <div class="hero-image-placeholder">
+        Imagen: persona abrazando un perro
+      </div>
+    </div>
+  </section>
+
+  <!-- Catálogo de mascotas (vista rápida en la portada, opcional) -->
+  <section id="catalogo" class="section catalog">
+    <div class="section-header">
+      <h2>Mascotas en adopción</h2>
+      <p>Explora algunas de las mascotas que esperan por una familia.</p>
+    </div>
+    <div class="catalog-grid">
+      <article class="pet-card">
+        <div class="pet-photo">Foto</div>
+        <h3>Firulais</h3>
+        <p>Perro • 3 años • Mestizo</p>
+        <button class="btn btn-outline">Quiero conocerlo</button>
+      </article>
+      <article class="pet-card">
+        <div class="pet-photo">Foto</div>
+        <h3>Mishi</h3>
+        <p>Gato • 2 años • Criolla</p>
+        <button class="btn btn-outline">Quiero conocerla</button>
+      </article>
+      <article class="pet-card">
+        <div class="pet-photo">Foto</div>
+        <h3>Rocco</h3>
+        <p>Perro • 1 año • Mediano</p>
+        <button class="btn btn-outline">Quiero conocerlo</button>
+      </article>
+      <article class="pet-card">
+        <div class="pet-photo">Foto</div>
+        <h3>Nala</h3>
+        <p>Gata • 4 años • Tricolor</p>
+        <button class="btn btn-outline">Quiero conocerla</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- Cómo funciona -->
+  <section id="como-funciona" class="section steps">
+    <div class="section-header">
+      <h2>¿Cómo funciona AdoptaConAmor?</h2>
+      <p>Te acompañamos en cada paso para que la adopción sea responsable y segura.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <span class="step-number">1</span>
+        <h3>Explora</h3>
+        <p>Revisa el catálogo de mascotas y encuentra la que mejor se adapte a tu estilo de vida.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-number">2</span>
+        <h3>Conecta</h3>
+        <p>Envíanos tus datos y nos comunicaremos contigo para orientarte en el proceso.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-number">3</span>
+        <h3>Adopta</h3>
+        <p>Conoce a tu futura mascota, firma el compromiso de adopción y comienza una nueva historia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reseñas -->
+  <section id="reseñas" class="section testimonials">
+    <div class="section-header">
+      <h2>Historias que inspiran</h2>
+      <p>Personas que decidieron adoptar con amor.</p>
+    </div>
+    <div class="testimonials-grid">
+      <article class="testimonial-card">
+        <p class="testimonial-text">
+          “Adoptar a Luna fue la mejor decisión. El proceso fue claro, rápido y muy humano.”
+        </p>
+        <p class="testimonial-author">— Ana, adoptante de Luna</p>
+      </article>
+      <article class="testimonial-card">
+        <p class="testimonial-text">
+          “Me guiaron en todo momento. Hoy Rocky es parte de la familia.”
+        </p>
+        <p class="testimonial-author">— Carlos, adoptante de Rocky</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Sección corta de contacto que invita a ir a la página de Contacto -->
+  <section id="contacto" class="section contact">
+    <div class="section-header">
+      <h2>¿Listo para adoptar?</h2>
+      <p>Ve a nuestra página de contacto y cuéntanos sobre ti.</p>
+    </div>
+    <div class="contact-layout">
+      <div class="contact-info">
+        <h3>Datos de contacto</h3>
+        <p>📧 correo: contacto@adoptaconamor.org</p>
+        <p>📱 WhatsApp: +57 317 362 0873</p>
+        <p>📍 Ciudad: Medellín, Colombia</p>
+        <p class="note">
+          Proyecto académico basado en el Proceso Personal de Software (PSP).
+        </p>
+        <a href="contacto.html" class="btn btn-primary" style="margin-top:1rem;">Ir al formulario de contacto</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 AdoptaConAmor – Proyecto académico PSP</p>
+  </footer>
+
+  <!-- Asegúrate que este nombre coincida con tu archivo JS real -->
+  <script src="formulario.js"></script>
+</body>
+</html>
