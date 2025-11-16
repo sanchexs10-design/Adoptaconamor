@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registrarse / Iniciar sesión - AdoptaConAmor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <header class="topbar">
+    <div class="logo">
+      <a href="index.html">AdoptaConAmor</a>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="login.html">Iniciar sesión</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </header>
+
+  <main class="section contact">
+    <div class="section-header">
+      <h2>Registrarse o Iniciar sesión</h2>
+      <p>Crea una cuenta sencilla para simular tu acceso al portal.</p>
+    </div>
+
+    <div class="contact-layout">
+      <!-- Registro -->
+      <form id="registerForm" class="contact-form">
+        <h3>Registrarse</h3>
+        <label>
+          Nombre completo
+          <input type="text" name="nombre" required />
+        </label>
+
+        <label>
+          Correo electrónico
+          <input type="email" name="correo" required />
+        </label>
+
+        <label>
+          Contraseña (solo demostración)
+          <input type="password" name="password" required />
+        </label>
+
+        <button type="submit" class="btn btn-primary">Crear cuenta</button>
+      </form>
+
+      <!-- Inicio de sesión -->
+      <form id="loginForm" class="contact-form">
+        <h3>Iniciar sesión</h3>
+        <label>
+          Correo electrónico
+          <input type="email" name="correo" required />
+        </label>
+
+        <label>
+          Contraseña
+          <input type="password" name="password" required />
+        </label>
+
+        <button type="submit" class="btn btn-secondary">Entrar</button>
+        <p class="note" style="margin-top:0.7rem;">
+          *Este inicio de sesión es solo una simulación con almacenamiento local (localStorage) para fines académicos.*
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 AdoptaConAmor – Proyecto académico PSP</p>
+  </footer>
+
+  <script src="formulario.js"></script>
+</body>
+</html>
