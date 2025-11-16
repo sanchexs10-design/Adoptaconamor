@@ -29,7 +29,15 @@ body {
   font-size: 1.1rem;
   color: #f26c6c;
 }
+.logo a {
+  color: #f26c6c;
+  text-decoration: none;
+  font-weight: 700;
+}
 
+.logo a:hover {
+  text-decoration: none;
+}
 .nav {
   display: flex;
   gap: 1rem;
