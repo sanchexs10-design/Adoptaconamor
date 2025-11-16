@@ -43,3 +43,35 @@ if (contactForm) {
     sessionStorage.removeItem("mascotaInteres");
   });
 }
+
+// --- Filtros del catálogo ---
+const filtroTipo = document.getElementById("filtroTipo");
+const filtroEdad = document.getElementById("filtroEdad");
+const tarjetas = document.querySelectorAll(".catalog-grid .pet-card");
+
+function aplicarFiltros() {
+  if (!tarjetas.length) return;
+
+  const tipo = filtroTipo ? filtroTipo.value : "todos";
+  const edad = filtroEdad ? filtroEdad.value : "todas";
+
+  tarjetas.forEach((card) => {
+    const cardTipo = card.dataset.tipo;   // perro / gato
+    const cardEdad = card.dataset.edad;   // cachorro / adulto
+
+    const coincideTipo = tipo === "todos" || cardTipo === tipo;
+    const coincideEdad = edad === "todas" || cardEdad === edad;
+
+    if (coincideTipo && coincideEdad) {
+      card.style.display = "";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+
+// Solo agregamos eventos si existen los filtros (para que no falle en index/contacto)
+if (filtroTipo && filtroEdad) {
+  filtroTipo.addEventListener("change", aplicarFiltros);
+  filtroEdad.addEventListener("change", aplicarFiltros);
+}
