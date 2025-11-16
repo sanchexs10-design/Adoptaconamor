@@ -390,7 +390,7 @@ body {
   }
 
   /* Mostrar el botón ☰ en móvil */
-  ..nav-toggle {
+  .nav-toggle {
     display: block;
   }
 
