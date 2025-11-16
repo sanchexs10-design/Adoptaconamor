@@ -26,11 +26,78 @@
       <p>Explora algunas de las mascotas que esperan una nueva familia.</p>
     </div>
 
-    <!-- Barra de filtros simples (opcional / visual) -->
+    <!-- Barra de filtros funcional -->
     <div style="max-width: 900px; margin: 0 auto 2rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
       <span style="font-size: 0.9rem; color: #777;">Filtrar por:</span>
-      <select style="padding: 0.4rem 0.6rem; border-radius: 999px; border: 1px solid #ddd; font-size: 0.9rem;">
-        <option>Todos los tipos</option>
-        <option>Perros</option>
-        <option>Gatos</option>
+
+      <select id="filtroTipo" style="padding: 0.4rem 0.6rem; border-radius: 999px; border: 1px solid #ddd; font-size: 0.9rem;">
+        <option value="todos">Todos los tipos</option>
+        <option value="perro">Perros</option>
+        <option value="gato">Gatos</option>
       </select>
+
+      <select id="filtroEdad" style="padding: 0.4rem 0.6rem; border-radius: 999px; border: 1px solid #ddd; font-size: 0.9rem;">
+        <option value="todas">Cualquier edad</option>
+        <option value="cachorro">Cachorros</option>
+        <option value="adulto">Adultos</option>
+      </select>
+    </div>
+
+    <!-- Grid de mascotas -->
+    <div class="catalog-grid">
+      <article class="pet-card" data-tipo="perro" data-edad="adulto">
+        <div class="pet-photo">
+          <img src="img/firulais.jpg" alt="Firulais" />
+        </div>
+        <h3>Firulais</h3>
+        <p>Perro • 3 años • Mestizo</p>
+        <button class="btn btn-outline btn-interes" data-pet="Firulais">
+          Quiero conocerlo
+        </button>
+      </article>
+
+      <article class="pet-card" data-tipo="gato" data-edad="adulto">
+        <div class="pet-photo">
+          <img src="img/mishi.jpg" alt="Mishi" />
+        </div>
+        <h3>Mishi</h3>
+        <p>Gato • 2 años • Criolla</p>
+        <button class="btn btn-outline btn-interes" data-pet="Mishi">
+          Quiero conocerla
+        </button>
+      </article>
+
+      <article class="pet-card" data-tipo="perro" data-edad="cachorro">
+        <div class="pet-photo">
+          <img src="img/rocco.jpg" alt="Rocco" />
+        </div>
+        <h3>Rocco</h3>
+        <p>Perro • 1 año • Mediano</p>
+        <button class="btn btn-outline btn-interes" data-pet="Rocco">
+          Quiero conocerlo
+        </button>
+      </article>
+
+      <article class="pet-card" data-tipo="gato" data-edad="adulto">
+        <div class="pet-photo">
+          <img src="img/Nala.jpg" alt="Nala" />
+        </div>
+        <h3>Nala</h3>
+        <p>Gata • 4 años • Tricolor</p>
+        <button class="btn btn-outline btn-interes" data-pet="Nala">
+          Quiero conocerla
+        </button>
+      </article>
+
+      <!-- Puedes agregar más tarjetas aquí con sus data-tipo y data-edad -->
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 AdoptaConAmor – Proyecto académico PSP</p>
+  </footer>
+
+  <!-- Tu JS general -->
+  <script src="formulario.js"></script>
+</body>
+</html>
