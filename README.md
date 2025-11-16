@@ -1,4 +1,4 @@
-# 🐾 AdoptaConAmor
+# AdoptaConAmor
 
 **AdoptaConAmor** es un portal web dedicado a promover la adopción responsable de mascotas.  
 Fue desarrollado como parte de un proyecto académico siguiendo el **Proceso Personal de Software (PSP)**.
@@ -7,7 +7,7 @@ El sitio permite a los usuarios explorar mascotas en adopción, conocer cómo fu
 
 ---
 
-## 🌐 Funcionalidades principales
+## Funcionalidades principales
 
 - **Sección Inicio (Hero)**  
   - Mensaje principal: *“Una nueva oportunidad para ellos. Una nueva historia para ti”*.  
@@ -53,7 +53,7 @@ El sitio permite a los usuarios explorar mascotas en adopción, conocer cómo fu
 
 ---
 
-## 🗂️ Estructura del proyecto
+## Estructura del proyecto
 
 ```text
 adoptaconamor/
