@@ -6,6 +6,13 @@ if (navToggle && nav) {
   navToggle.addEventListener("click", () => {
     nav.classList.toggle("show");
   });
+
+  const navLinks = nav.querySelectorAll("a");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("show");
+    });
+  });
 }
 
 // --- Botones "Quiero conocerlo/la" ---
@@ -74,4 +81,63 @@ function aplicarFiltros() {
 if (filtroTipo && filtroEdad) {
   filtroTipo.addEventListener("change", aplicarFiltros);
   filtroEdad.addEventListener("change", aplicarFiltros);
+}
+
+// --- Registro e Inicio de sesión (simulados con localStorage) ---
+const registerForm = document.getElementById("registerForm");
+const loginForm = document.getElementById("loginForm");
+
+// Clave donde vamos a guardar el usuario en localStorage
+const USER_KEY = "usuarioAdoptaConAmor";
+
+// Registro
+if (registerForm) {
+  registerForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const nombre = registerForm.elements["nombre"].value.trim();
+    const correo = registerForm.elements["correo"].value.trim();
+    const password = registerForm.elements["password"].value.trim();
+
+    if (!nombre || !correo || !password) {
+      alert("Por favor completa todos los campos de registro.");
+      return;
+    }
+
+    const usuario = { nombre, correo, password };
+
+    // Guardamos el usuario en localStorage
+    localStorage.setItem(USER_KEY, JSON.stringify(usuario));
+
+    alert("Registro exitoso. Ahora puedes iniciar sesión.");
+    registerForm.reset();
+  });
+}
+
+// Inicio de sesión
+if (loginForm) {
+  loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const correo = loginForm.elements["correo"].value.trim();
+    const password = loginForm.elements["password"].value.trim();
+
+    const usuarioGuardado = localStorage.getItem(USER_KEY);
+
+    if (!usuarioGuardado) {
+      alert("No hay ningún usuario registrado. Regístrate primero.");
+      return;
+    }
+
+    const usuario = JSON.parse(usuarioGuardado);
+
+    if (usuario.correo === correo && usuario.password === password) {
+      alert(`¡Bienvenido, ${usuario.nombre}! Has iniciado sesión correctamente.`);
+      loginForm.reset();
+      sessionStorage.setItem("sesionActiva", "true");
+      window.location.href = "index.html";
+    } else {
+      alert("Correo o contraseña incorrectos.");
+    }
+  });
 }
