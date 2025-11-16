@@ -23,12 +23,40 @@ body {
   top: 0;
   z-index: 100;
 }
+.user-banner {
+  background-color: #fff3f3;
+  border-bottom: 1px solid #ffd1d1;
+  padding: 0.6rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.btn-sm {
+  padding: 0.35rem 0.9rem;
+  font-size: 0.8rem;
+}
 
 .logo a {
   font-weight: 700;
   font-size: 1.1rem;
   color: #f26c6c;
   text-decoration: none;
+}
+.user-banner {
+  background-color: #fff3f3;
+  border-bottom: 1px solid #ffd1d1;
+  padding: 0.6rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.btn-sm {
+  padding: 0.35rem 0.9rem;
+  font-size: 0.8rem;
 }
 
 .nav {
