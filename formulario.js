@@ -15,6 +15,9 @@ if (navToggle && nav) {
   });
 }
 
+// Clave donde vamos a guardar el usuario en localStorage
+const USER_KEY = "usuarioAdoptaConAmor";
+
 // --- Botones "Quiero conocerlo/la" ---
 const interesButtons = document.querySelectorAll(".btn-interes");
 
@@ -87,9 +90,6 @@ if (filtroTipo && filtroEdad) {
 const registerForm = document.getElementById("registerForm");
 const loginForm = document.getElementById("loginForm");
 
-// Clave donde vamos a guardar el usuario en localStorage
-const USER_KEY = "usuarioAdoptaConAmor";
-
 // Registro
 if (registerForm) {
   registerForm.addEventListener("submit", (e) => {
@@ -141,3 +141,35 @@ if (loginForm) {
     }
   });
 }
+
+// --- Mostrar saludo si hay sesión activa (para index y demás páginas) ---
+function actualizarEstadoUsuario() {
+  const userBanner = document.getElementById("userBanner");
+  const userGreeting = document.getElementById("userGreeting");
+  const logoutButton = document.getElementById("logoutButton");
+
+  const sesionActiva = sessionStorage.getItem("sesionActiva");
+  const usuarioGuardado = localStorage.getItem(USER_KEY);
+
+  if (!userBanner || !userGreeting || !logoutButton) {
+    return; // esta página no tiene barra de usuario
+  }
+
+  if (sesionActiva === "true" && usuarioGuardado) {
+    const usuario = JSON.parse(usuarioGuardado);
+    userGreeting.textContent = `Hola, ${usuario.nombre}, gracias por iniciar sesión.`;
+    userBanner.style.display = "flex";
+
+    logoutButton.addEventListener("click", () => {
+      sessionStorage.removeItem("sesionActiva");
+      userBanner.style.display = "none";
+      alert("Has cerrado sesión.");
+      window.location.href = "index.html";
+    });
+  } else {
+    userBanner.style.display = "none";
+  }
+}
+
+// Ejecutar al cargar la página
+actualizarEstadoUsuario();
