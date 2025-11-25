@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <body>
   <!-- Barra de navegación -->
   <header class="topbar">
@@ -168,6 +169,45 @@
       </div>
     </div>
   </section>
+<section id="metricas-proyecto" class="metricas">
+  <h2>Métricas del proyecto</h2>
+
+  <div class="contenedor-graficas">
+    <div class="tarjeta-grafica">
+      <h3>Horas por fase PSP</h3>
+      <canvas id="graficoHoras"></canvas>
+    </div>
+
+    <div class="tarjeta-grafica">
+      <h3>Distribución de LOC nuevas por fase</h3>
+      <canvas id="graficoLOC"></canvas>
+    </div>
+  </div>
+
+  <div class="contenedor-listas">
+    <div class="tarjeta-lista">
+      <h3>Proceso de adopción (lista numerada)</h3>
+      <ol>
+        <li>El usuario navega al catálogo de mascotas.</li>
+        <li>Selecciona la mascota que desea conocer.</li>
+        <li>Revisa la información detallada de la mascota.</li>
+        <li>Llena el formulario de solicitud de adopción.</li>
+        <li>Es contactado por la fundación para continuar el proceso.</li>
+      </ol>
+    </div>
+
+    <div class="tarjeta-lista">
+      <h3>Requisitos para adoptar (lista con viñetas)</h3>
+      <ul>
+        <li>Ser mayor de edad.</li>
+        <li>Contar con espacio adecuado para la mascota.</li>
+        <li>Comprometerse al cuidado responsable (alimentación, salud, cariño).</li>
+        <li>Aceptar visitas de seguimiento si la fundación lo requiere.</li>
+        <li>Firmar el acuerdo de adopción.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
   <footer class="footer">
     <p>&copy; 2025 AdoptaConAmor – Proyecto académico PSP</p>
