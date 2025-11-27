@@ -173,3 +173,22 @@ function actualizarEstadoUsuario() {
 
 // Ejecutar al cargar la página
 actualizarEstadoUsuario();
+
+<section id="estadisticas-adopcion" class="metricas">
+  <h2>Estadísticas de solicitudes de adopción</h2>
+  <p style="text-align:center; margin-bottom: 1rem;">
+    Estos datos representan, de forma simulada para el proyecto, las solicitudes de adopción recibidas en AdoptaConAmor.
+  </p>
+
+  <div class="contenedor-graficas">
+    <div class="tarjeta-grafica">
+      <h3>Solicitudes por tipo de mascota</h3>
+      <canvas id="graficoTipos"></canvas>
+    </div>
+
+    <div class="tarjeta-grafica">
+      <h3>Solicitudes por edad de la mascota</h3>
+      <canvas id="graficoEdades"></canvas>
+    </div>
+  </div>
+</section>
