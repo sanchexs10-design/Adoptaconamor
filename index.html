@@ -26,7 +26,7 @@
     <button class="nav-toggle" id="navToggle">☰</button>
   </header>
 
-  <!-- Barra de usuario (solo se muestra si hay sesión) -->
+  <!-- Barra de usuario-->
   <div id="userBanner" class="user-banner" style="display:none;">
     <span id="userGreeting"></span>
     <button id="logoutButton" class="btn btn-secondary btn-sm">Cerrar sesión</button>
@@ -51,7 +51,7 @@
     </div>
   </section>
 
-  <!-- Catálogo de mascotas (vista rápida en la portada) -->
+  <!-- Catálogo de mascotas -->
   <section id="catalogo" class="section catalog">
     <div class="section-header">
       <h2>Mascotas en adopción</h2>
@@ -171,22 +171,6 @@
     </div>
   </section>
 
-  <!-- Métricas del proyecto: SOLO gráficas -->
-  <section id="metricas-proyecto" class="metricas">
-    <h2>Métricas del proyecto</h2>
-
-    <div class="contenedor-graficas">
-      <div class="tarjeta-grafica">
-        <h3>Horas por fase PSP</h3>
-        <canvas id="graficoHoras"></canvas>
-      </div>
-
-      <div class="tarjeta-grafica">
-        <h3>Distribución de LOC nuevas por fase</h3>
-        <canvas id="graficoLOC"></canvas>
-      </div>
-    </div>
-  </section>
 
   <footer class="footer">
     <p>&copy; 2025 AdoptaConAmor – Proyecto académico PSP</p>
@@ -195,60 +179,6 @@
   <!-- Tu JS existente -->
   <script src="formulario.js"></script>
 
-  <!-- Código de las gráficas -->
-  <script>
-    // Gráfico de barras: Horas por fase PSP
-    const ctxHoras = document.getElementById('graficoHoras').getContext('2d');
-
-    const graficoHoras = new Chart(ctxHoras, {
-      type: 'bar',
-      data: {
-        labels: ['Planeación', 'Diseño', 'Codificación', 'Pruebas', 'Postmortem'],
-        datasets: [{
-          label: 'Horas reales por fase',
-          data: [3, 6, 12, 5, 4],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        responsive: true,
-        scales: {
-          y: {
-            beginAtZero: true,
-            ticks: {
-              stepSize: 2
-            },
-            title: {
-              display: true,
-              text: 'Horas'
-            }
-          },
-          x: {
-            title: {
-              display: true,
-              text: 'Fases PSP'
-            }
-          }
-        }
-      }
-    });
-
-    // Gráfico de torta: Distribución de LOC nuevas por fase
-    const ctxLOC = document.getElementById('graficoLOC').getContext('2d');
-
-    const graficoLOC = new Chart(ctxLOC, {
-      type: 'pie',
-      data: {
-        labels: ['Planeación', 'Diseño', 'Codificación', 'Pruebas', 'Postmortem'],
-        datasets: [{
-          label: 'LOC nuevas por fase',
-          data: [0, 220, 320, 60, 120]
-        }]
-      },
-      options: {
-        responsive: true
-      }
-    });
   </script>
 </body>
 </html>
