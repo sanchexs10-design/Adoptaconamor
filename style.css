@@ -381,8 +381,8 @@ body {
 }
 
 .tarjeta-grafica canvas {
-  width: 180px !important;
-  height: 120px !important;
+  width: 220px !important;
+  height: 140px !important;
   display: block;
   margin: 0 auto;
 }
