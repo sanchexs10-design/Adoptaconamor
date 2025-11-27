@@ -376,8 +376,8 @@ body {
 
 /* Tamaño específico para los canvas de las gráficas (AJUSTE FUERTE) */
 .tarjeta-grafica {
-  max-width: 200px;       /* tarjeta angosta */
-  padding: 0.7rem 1rem;
+  max-width: 230px;       /* tarjeta angosta */
+  padding: 0.8rem 2rem;
 }
 
 .tarjeta-grafica canvas {
