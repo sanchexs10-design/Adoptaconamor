@@ -112,7 +112,7 @@
   <section id="estadisticas-adopcion" class="metricas">
     <h2>Estadísticas de solicitudes de adopción</h2>
     <p style="text-align:center; margin-bottom: 1rem;">
-      Estos datos representan las solicitudes de adopción recibidas en AdoptaConAmor.
+      Estos datos representan, de forma simulada para el proyecto, las solicitudes de adopción recibidas en AdoptaConAmor.
     </p>
 
     <div class="contenedor-graficas">
@@ -123,4 +123,84 @@
 
       <div class="tarjeta-grafica">
         <h3>Solicitudes por edad de la mascota</h3>
-        <canvas id="graficoEdades"></can
+        <canvas id="graficoEdades"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 AdoptaConAmor – Proyecto académico PSP</p>
+  </footer>
+
+  <!-- Script del formulario -->
+  <script src="formulario.js"></script>
+
+  <!-- Código de las gráficas -->
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      // Verificamos que existan los canvas antes de crear los gráficos
+      const canvasTipos = document.getElementById('graficoTipos');
+      const canvasEdades = document.getElementById('graficoEdades');
+
+      if (canvasTipos && canvasTipos.getContext) {
+        const ctxTipos = canvasTipos.getContext('2d');
+
+        // Gráfico de torta: Solicitudes por tipo de mascota
+        new Chart(ctxTipos, {
+          type: 'pie',
+          data: {
+            labels: ['Perros', 'Gatos', 'Otros'],
+            datasets: [{
+              label: 'Solicitudes de adopción por tipo',
+              // Datos simulados para el proyecto
+              data: [18, 12, 5]
+            }]
+          },
+          options: {
+            responsive: true
+          }
+        });
+      }
+
+      if (canvasEdades && canvasEdades.getContext) {
+        const ctxEdades = canvasEdades.getContext('2d');
+
+        // Gráfico de barras: Solicitudes por edad de la mascota
+        new Chart(ctxEdades, {
+          type: 'bar',
+          data: {
+            labels: ['Cachorros', 'Adultos', 'Senior'],
+            datasets: [{
+              label: 'Solicitudes de adopción',
+              // Datos simulados para el proyecto
+              data: [10, 18, 7],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            responsive: true,
+            scales: {
+              y: {
+                beginAtZero: true,
+                ticks: {
+                  stepSize: 1
+                },
+                title: {
+                  display: true,
+                  text: 'Número de solicitudes'
+                }
+              },
+              x: {
+                title: {
+                  display: true,
+                  text: 'Edad de la mascota'
+                }
+              }
+            }
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
