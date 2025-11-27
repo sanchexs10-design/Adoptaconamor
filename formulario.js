@@ -1,8 +1,4 @@
-// formulario.js
-
-// =========================
 // MENÚ MÓVIL (BOTÓN ☰)
-// =========================
 const navToggle = document.getElementById("navToggle");
 const nav = document.querySelector(".nav");
 
@@ -14,7 +10,6 @@ if (navToggle && nav) {
 
 // =========================
 // FORMULARIO DE CONTACTO
-// (solo en contacto.html)
 // =========================
 const contactForm = document.getElementById("contactForm");
 
@@ -29,7 +24,6 @@ if (contactForm) {
 
 // =========================
 // BOTONES "QUIERO CONOCERLO/LA"
-// (en index y en catálogo)
 // =========================
 const interesButtons = document.querySelectorAll(".btn-interes");
 
@@ -44,7 +38,7 @@ if (interesButtons.length > 0) {
 
       alert(mensaje);
 
-      // Opcional: redirigir directamente al formulario de contacto
+      // Redirigir al formulario de contacto
       window.location.href = "contacto.html";
     });
   });
@@ -52,38 +46,13 @@ if (interesButtons.length > 0) {
 
 // =========================
 // FILTROS DEL CATÁLOGO
-// (catalogo.html)
 // =========================
-//
-// NOTA: aquí asumimos que en catalogo.html tienes algo como:
-//
-// <select id="filtroTipo">
-//   <option value="todos">Todos</option>
-//   <option value="perro">Perros</option>
-//   <option value="gato">Gatos</option>
-// </select>
-//
-// <select id="filtroEdad">
-//   <option value="todas">Todas</option>
-//   <option value="cachorro">Cachorros</option>
-//   <option value="adulto">Adultos</option>
-// </select>
-//
-// <button id="btnLimpiarFiltros">Limpiar filtros</button>
-//
 const catalogGrid = document.querySelector(".catalog-grid");
 
 if (catalogGrid) {
   const petCards = catalogGrid.querySelectorAll(".pet-card");
-  const filtroTipo =
-    document.getElementById("filtroTipo") ||
-    document.getElementById("filterTipo");
-  const filtroEdad =
-    document.getElementById("filtroEdad") ||
-    document.getElementById("filterEdad");
-  const btnLimpiar =
-    document.getElementById("btnLimpiarFiltros") ||
-    document.getElementById("btnLimpiar");
+  const filtroTipo = document.getElementById("filtroTipo");
+  const filtroEdad = document.getElementById("filtroEdad");
 
   function aplicarFiltros() {
     const tipoSeleccionado = filtroTipo ? filtroTipo.value : "todos";
@@ -107,20 +76,10 @@ if (catalogGrid) {
     });
   }
 
-  // Ejecutar filtros cuando cambian los selects
   if (filtroTipo) {
     filtroTipo.addEventListener("change", aplicarFiltros);
   }
   if (filtroEdad) {
     filtroEdad.addEventListener("change", aplicarFiltros);
-  }
-
-  // Botón para limpiar filtros
-  if (btnLimpiar) {
-    btnLimpiar.addEventListener("click", function () {
-      if (filtroTipo) filtroTipo.value = "todos";
-      if (filtroEdad) filtroEdad.value = "todas";
-      aplicarFiltros();
-    });
   }
 }
